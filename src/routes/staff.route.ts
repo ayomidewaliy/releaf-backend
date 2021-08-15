@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { check, CustomValidator, validationResult } from "express-validator";
 import Staff from "../models/staff.model";
+import Clock from "../models/clock.model";
 
 const router = express.Router();
 
@@ -127,21 +128,6 @@ router.patch(
  * @description - Get All Staffs
  */
 
-router.get("/staffs", async (res: Response) => {
-  try {
-    const staff = await Staff.find();
-    return res
-      .json({
-        data: staff,
-        message: "All staffs fetched successfully",
-        success: true,
-      })
-      .status(200);
-  } catch (error) {
-    res.status(500).send("Error in Getting");
-  }
-});
-
 router.get("/", async (req: Request, res: Response) => {
   try {
     const staff = await Staff.find();
@@ -153,7 +139,22 @@ router.get("/", async (req: Request, res: Response) => {
       })
       .status(200);
   } catch (err) {
-    res.status(500).send("Error in Saving");
+    res.status(500).send("Error in fetching");
+  }
+});
+
+router.get("/clocks", async (req: Request, res: Response) => {
+  try {
+    const clock = await Clock.find();
+    return res
+      .json({
+        data: clock,
+        message: "All staffs clockin/out fetched successfully",
+        success: true,
+      })
+      .status(200);
+  } catch (err) {
+    res.status(500).send("Error in fetching");
   }
 });
 
