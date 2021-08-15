@@ -8,7 +8,7 @@
     "build": "rimraf dist && tsc",
     "postinstall": "npm run build",
     "start": "node index.js",
-    "start:dev": "PORT=5000 node index.js",
+    "start:dev": "PORT=5000 node dist/index.js",
     "dev": "PORT=4000 nodemon --exec ts-node index.ts --watch src"
   },
   "keywords": [],
