@@ -1,10 +1,10 @@
 import { json } from "body-parser";
 import express from "express";
-import { verifyToken } from "./src/utils/validate-token";
+import { verifyToken } from "./utils/validate-token";
 
-const user = require("./src/routes/user.route");
-const staff = require("./src/routes/staff.route");
-const clock = require("./src/routes/clock.route");
+const user = require("./routes/user.route");
+const staff = require("./routes/staff.route");
+const clock = require("./routes/clock.route");
 const cors = require("cors");
 
 const corsOptions = {

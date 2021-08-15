@@ -1,12 +1,13 @@
 {
-  "name": "auth-nodejs",
+  "name": "relead-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts",
-    "build": "tsc --project ./"
+    "build-ts": "tsc",
+    "start": "npx nodemon",
+    "prod": "npx run build-ts",
+    "postinstall": "npm run build-ts"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,10 @@
     "mongoose": "^5.12.9",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    
   }
 }
