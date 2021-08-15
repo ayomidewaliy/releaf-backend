@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.ts",
     "build": "tsc --project ./",
-    "postinstall": "tsc && mv -i -v public dist/ && rm -v -rf src"
+    "postinstall": "tsc"
   },
   "keywords": [],
   "author": "",
