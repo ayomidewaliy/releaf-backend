@@ -1,0 +1,4 @@
+{
+  "secret": "some-secret-shit-goes-here",
+  "connectionString": "mongodb+srv://waLkErNET:Ayomide06@walker.tdqqy.mongodb.net/releaf?retryWrites=true&w=majority"
+}
