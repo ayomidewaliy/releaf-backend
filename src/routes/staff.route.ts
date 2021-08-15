@@ -68,7 +68,6 @@ router.post(
         })
         .status(201);
     } catch (err) {
-      console.log(err.message);
       res.status(500).send("Error in Saving");
     }
   }
@@ -117,7 +116,6 @@ router.patch(
         })
         .status(404);
     } catch (error) {
-      console.log(error);
       res.status(500).send("Error in Updating");
     }
   }
@@ -140,7 +138,6 @@ router.get("/staffs", async (res: Response) => {
       })
       .status(200);
   } catch (error) {
-    console.log(error);
     res.status(500).send("Error in Getting");
   }
 });
@@ -156,7 +153,6 @@ router.get("/", async (req: Request, res: Response) => {
       })
       .status(200);
   } catch (err) {
-    console.log(err.message);
     res.status(500).send("Error in Saving");
   }
 });

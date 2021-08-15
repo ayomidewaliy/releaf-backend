@@ -101,10 +101,6 @@ router.post(
           _staffId: staff._id,
         });
 
-        console.log("====================================");
-        console.log(clock);
-        console.log("====================================");
-
         if (clock) {
           await Clock.findByIdAndUpdate(clock._id, {
             clockOutTime: Date.now(),
@@ -135,7 +131,6 @@ router.post(
         })
         .status(404);
     } catch (error) {
-      console.log(error);
       res.status(500).send("Error in Updating");
     }
   }
