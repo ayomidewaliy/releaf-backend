@@ -94,7 +94,7 @@ router.patch(
 
       const id = req.params.id;
 
-      const staff = await Staff.findOne({ id });
+      const staff = await Staff.findOne({ _id: id });
 
       if (staff) {
         await Staff.findByIdAndUpdate(id, {
